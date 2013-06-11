@@ -56,7 +56,7 @@ public class CassandraService {
 
 
             ColumnQuery<String, String, String> columnQuery = HFactory.createStringColumnQuery(keyspace);
-            columnQuery.setColumnFamily(COLUMN_FAMILY).setKey("001").setName("Sample transaction");
+            columnQuery.setColumnFamily(COLUMN_FAMILY).setKey("001").setName("name");
             QueryResult<HColumn<String, String>> result = columnQuery.execute();
 
             System.out.println("Read HColumn from cassandra: " + result.get());
