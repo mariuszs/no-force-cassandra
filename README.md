@@ -1,6 +1,6 @@
-## Starting cassandra and web app
+## Starting cassandra
 
-    mvn cassandra:start jetty:run -Dcassandra.jmxPort=7199
+    mvn cassandra:start jetty:run
 
 ## Loading `load.script`
 
