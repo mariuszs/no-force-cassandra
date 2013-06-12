@@ -14,7 +14,7 @@ public class Help {
 
     public Help() {
         helpMap.put(Command.QUIT, "Quit");
-        helpMap.put(Command.EXECUTE, "Execute operation");
+        helpMap.put(Command.STAX, "Select data with DataStax CQL Driver");
         helpMap.put(Command.HELP, "Print help");
     }
 

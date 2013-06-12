@@ -3,7 +3,7 @@ package no.force.cassandra.cli;
 import static com.google.common.base.Strings.isNullOrEmpty;
 
 public enum Command {
-    QUIT, EXECUTE, HELP, NONE, UNKNOWN;
+    QUIT, STAX, HELP, NONE, UNKNOWN;
 
     public static Command parse(String line) {
 

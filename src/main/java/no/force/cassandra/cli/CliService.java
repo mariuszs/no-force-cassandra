@@ -1,6 +1,6 @@
 package no.force.cassandra.cli;
 
-import no.force.cassandra.HectorService;
+import no.force.cassandra.DataStaxService;
 import org.fusesource.jansi.AnsiConsole;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,7 +15,7 @@ import static org.fusesource.jansi.AnsiConsole.out;
 public class CliService {
 
     @Autowired
-    private HectorService hectorService;
+    private DataStaxService dataStaxService;
 
     private Help help = new Help();
 
@@ -41,9 +41,9 @@ public class CliService {
                             .reset());
                     continue;
 
-                case EXECUTE:
+                case STAX:
                     out.println("Execute invoked!");
-                    hectorService.execute();
+                    dataStaxService.execute();
                     continue;
 
                 case HELP:
