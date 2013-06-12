@@ -5,6 +5,10 @@
 ## Loading `load.script`
 
     mvn cassandra:load
+    
+## Start app
+
+    java -jar -Dcassandra.host=localhosttarget/cassandra-force-jar-with-dependencies.jar 
 
 
 # Links
