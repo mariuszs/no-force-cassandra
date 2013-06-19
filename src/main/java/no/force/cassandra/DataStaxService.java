@@ -20,13 +20,22 @@ public class DataStaxService {
 
         Session session = dataStaxClient.createSession();
 
-        ResultSet results = session.execute("SELECT * FROM Transaction " +
+        session.execute("USE ass;");
+
+        session.execute("DROP TABLE transaction;");
+
+        session.execute("CREATE TABLE transaction (\n" +
+                " id varchar,\n" +
+                " name varchar," +
+                " PRIMARY KEY (id));");
+
+        ResultSet results = session.execute("SELECT * FROM transaction " +
                 "WHERE id = 001;");
         for (Row result : results) {
-            LOG.info("Result {}", result);
+            System.out.println("Result " + result);
 
         }
-
+        System.out.println("End...");
     }
 
 }

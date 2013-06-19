@@ -1,13 +1,3 @@
-create keyspace Forcespace;
+create keyspace ass;
 
-use Forcespace;
-
-create column family Transaction with comparator = UTF8Type;
-
-update column family Transaction with
-        column_metadata =
-        [
-        {column_name: id, validation_class: UTF8Type},
-        {column_name: name, validation_class: UTF8Type}
-        ];
-
+use ass;

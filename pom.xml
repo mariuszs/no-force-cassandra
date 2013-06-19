@@ -110,6 +110,7 @@
                 <version>1.2.1-1</version>
                 <configuration>
                     <skip>${skipTests}</skip>
+                    <yaml><![CDATA[start_native_transport: true]]></yaml>
                 </configuration>
                 <executions>
                     <execution>
